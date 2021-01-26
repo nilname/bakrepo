@@ -1,0 +1,99 @@
+    1  ls
+    2  git clone https://github.com/shadowsocks/shadowsocks.git@master
+    3  wget https://github.com/shadowsocks/shadowsocks/archive/2.9.1.zip
+    4  ls
+    5  unzip 2.9.1.zip 
+    6  clear
+    7  cd shadowsocks-2.9.1/
+    8  ls
+    9  ll
+   10  python3 setup.py install
+   11  ls
+   12  vi ss.json
+   13  ls
+   14  cd ..
+   15  cd -
+   16  nohup ssserver -c ss.json &>/dev/null
+   17  nohup ssserver -c ss.json &>/dev/null &
+   18  systemctl stop firewalld.service 
+   19  cat ss.json 
+   20  history 
+   21  vim  ss.json 
+   22  kill -9 3105
+   23  nohup ssserver -c ss.json &>/dev/null &
+   24  cat ss.json 
+   25  ps -ef|grep sss
+   26  nohup ssserver -c ss.json 
+   27  tail -f nohup.out 
+   28  vim ss.json 
+   29  nohup ssserver -c ss.json &>/dev/null &
+   30  ps -ef|grep sss
+   31  ls
+   32  cd shadowsocks-2.9.1/
+   33  ls
+   34  cat ss.json 
+   35  podman pull python3
+   36  podman pull python
+   37  podman images 
+   38  podman run -it python /bin/bash
+   39  ls
+   40  docker ps
+   41  alias docker='podman'
+   42  docker  ps -a
+   43  cd ..
+   44  docker  cp shadowsocks-2.9.1 tender_bardeen:/root
+   45  docker start tender_bardeen
+   46  docker exec -it /bin/bash
+   47  docker exec -it    tender_bardeen /bin/bash
+   48  docker       commit   tender_bardeen -t hxfeng/myss
+   49  docker images
+   50  ages
+   51  docker images
+   52  docker       commit   tender_bardeen  hxfeng/myss
+   53  ls
+   54  docker images
+   55  vim Dockerfile
+   56  ls
+   57  clear
+   58  mkdir ss
+   59  mv Dockerfile ss/
+   60  cd ss/
+   61  docker build -t docker.io/hxfeng/myss
+   62  docker build -t docker.io/hxfeng/myss .
+   63  docker images
+   64  docker login
+   65  docker push docker.io/hxfeng/myss
+   66  docker push docker.io/hxfeng/myss:latest
+   67  docker tag docker.io/hxfeng/myss:latest hxfeng/myss:latest
+   68  docker push hxfeng/myss:latest
+   69  ls
+   70  cd ..
+   71  ls
+   72  clear
+   73  cd shadowsocks-2.9.1/
+   74  ls
+   75  vim ss.json 
+   76  ps -ef|grep sss
+   77  kill -9 3220
+   78  nohup ssserver -c ss.json &>/dev/null &
+   79  ls
+   80  ps -ef|grep sss
+   81  ls
+   82  cd ..
+   83  git clone https://github.com/nilname/bakrepo.git   
+   84  yum install git
+   85  ls
+   86  git clone https://github.com/nilname/bakrepo.git   
+   87  ls
+   88  cd bakrepo/
+   89  ls
+   90  cp  ../shadowsocks-2.9.1 -r .
+   91  ls
+   92  git add .
+   93  git commit -m 'add'
+   94  git config --global user.email "you@example.com"
+   95    git config --global user.name "Your Name"
+   96  git add .
+   97  git commit -m 'add'
+   98  git  push
+   99  history >hist.txt
